@@ -43,8 +43,7 @@ extension PrivacyVC {
         label.textColor = UIColor(hex: 0x30313C)
         label.numberOfLines = 0
         label.text = """
-Privacy Policy
-Welcome to BP SAVEU (" We "or" Application "). We take your privacy very seriously and are committed to protecting your personal information. Please read the following privacy Policy carefully before using our app to understand how we collect, use, store and protect personal information.
+Welcome to BP SAVEU. We take your privacy very seriously and are committed to protecting your personal information. Please read the following privacy Policy carefully before using our app to understand how we collect, use, store and protect personal information.
 1. Information collected
 In order to provide quality services, we may collect the following types of information:
 - ** Information provided by users: ** When you register for an account, use app features, or contact us, you may be required to provide personal information, such as name, contact information, gender, etc.
