@@ -34,7 +34,11 @@ class BPFinishVC: BaseVC {
     }
     
     @objc func back() {
-        navigationController?.popToRootViewController(animated: true)
+        GADUtil.share.show(.back) { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
     }
 }
 

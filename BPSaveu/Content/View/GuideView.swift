@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GoogleMobileAds
 import UIKit
 
 class GuideView: UIView {
@@ -15,8 +16,19 @@ class GuideView: UIView {
         dismissHandle = completion
     }
     
+    lazy var adView: GADNativeView = {
+        let view = GADNativeView(.big)
+        return view
+    }()
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    var nativeAD: GADNativeAd? = nil {
+        didSet {
+            adView.nativeAd = nativeAD
+        }
     }
     
     private var dismissHandle: (()->Void)? = nil
@@ -47,6 +59,14 @@ class GuideView: UIView {
         button.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(icon.snp.bottom).offset(38)
+        }
+        
+        addSubview(adView)
+        adView.snp.makeConstraints { make in
+            make.top.equalTo(button.snp.bottom).offset(28)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.height.equalTo(174)
         }
     }
     

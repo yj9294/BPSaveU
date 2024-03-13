@@ -8,7 +8,7 @@
 import UIKit
 
 enum BPReadingItem: String, CaseIterable {
-    case protect, eat, exercise, heart
+    case protect, eat, ad, exercise, heart
     var icon: String {
         return "reading_\(self.rawValue)"
     }
@@ -25,6 +25,8 @@ enum BPReadingItem: String, CaseIterable {
             return "Regular exercise, blood pressure is no longer high"
         case .heart:
             return "Stop smoking and limit alcohol to protect heart health"
+        default:
+            return ""
         }
     }
     var description: String {
@@ -76,6 +78,8 @@ Sources of information for the article:
 1. https://en.wikipedia.org/wiki/Hypotension
 2. https://en.wikipedia.org/wiki/Sphygmomanometer
 """
+        default:
+            return ""
         }
     }
 }

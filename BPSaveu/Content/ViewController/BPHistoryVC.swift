@@ -30,7 +30,11 @@ class BPHistoryVC: BaseVC {
     }
     
     @objc func back() {
-        navigationController?.popViewController(animated: true)
+        GADUtil.share.show(.back) { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 
 }
@@ -59,8 +63,11 @@ extension BPHistoryVC: UITableViewDataSource, UITableViewDelegate {
         if let cell = cell as? BPHistoryCell {
             cell.model = CacheUtil.shared.getBPModels()[indexPath.row]
             cell.editHandle = { [weak self] model in
-                let vc = BPVC(model, mode: .edit)
-                self?.navigationController?.pushViewController(vc, animated: true)
+                GADUtil.share.load(.enter)
+                GADUtil.share.show(.enter) { _ in
+                    let vc = BPVC(model, mode: .edit)
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
             }
         }
         return cell
@@ -68,8 +75,12 @@ extension BPHistoryVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = CacheUtil.shared.getBPModels()[indexPath.row]
-        let vc = BPVC(model, mode: .edit)
-        self.navigationController?.pushViewController(vc, animated: true)
+        GADUtil.share.load(.enter)
+        GADUtil.share.show(.enter) { _ in
+            let vc = BPVC(model, mode: .edit)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
+    
     
 }

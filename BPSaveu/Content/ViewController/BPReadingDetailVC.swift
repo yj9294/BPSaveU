@@ -26,6 +26,7 @@ class BPReadingDetailVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        GADUtil.share.load(.back)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +36,11 @@ class BPReadingDetailVC: BaseVC {
     }
     
     @objc func back() {
-        navigationController?.popViewController(animated: true)
+        GADUtil.share.show(.back) { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 
 }

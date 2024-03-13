@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,6 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         addGradient()
         addLoadingLife()
+        GADUtil.share.requestConfig()
+        
+        guard let url = connectionOptions.urlContexts.first?.url else {
+                return
+        }
+
+        ApplicationDelegate.shared.application(
+            UIApplication.shared,
+            open: url,
+            sourceApplication: nil,
+            annotation: [UIApplication.OpenURLOptionsKey.annotation]
+        )
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -29,6 +42,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         NotificationCenter.default.post(name: .applicationLoading, object: nil)
+        if let rootVC = window?.rootViewController?.presentedViewController {
+            if let presentedVC = rootVC.presentedViewController {
+                presentedVC.dismiss(animated: true) {
+                    rootVC.dismiss(animated: true)
+                }
+                return
+            }
+            rootVC.dismiss(animated: true)
+        }
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

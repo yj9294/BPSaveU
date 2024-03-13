@@ -10,6 +10,15 @@ import AppTrackingTransparency
 
 class LogVC: BaseVC {
     
+    lazy var guideView: GuideView = {
+        let view = GuideView{
+            self.setupModeView()
+            // 跳转新增BP
+            self.goBPVC()
+        }
+        return view
+    }()
+    
     lazy var modeTitle: UILabel = {
        let label = UILabel()
         label.textColor = UIColor(hex: 0x272C2E)
@@ -33,12 +42,19 @@ class LogVC: BaseVC {
         return label
     }()
     
+    lazy var adView: GADNativeView = {
+        let view = GADNativeView(.small)
+        return view
+    }()
+    
     var item: LogMode = CacheUtil.shared.logMode {
         didSet {
             modeTitle.text = item.title
             CacheUtil.shared.logMode = item
         }
     }
+    
+    var viewAppear: Bool = false
     
     var model: BPModel {
         switch item {
@@ -72,10 +88,22 @@ class LogVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupModeView()
+        addGADNatvieObserver()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.hidesBottomBarWhenPushed = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.viewAppear = true
+            GADUtil.share.load(.native)
+        }
+
+        if let vc = AppUtil.rootVC as? UITabBarController, vc.selectedIndex == 0 {
+            GADUtil.share.load(.submit)
+            GADUtil.share.load(.enter)
+            GADUtil.share.load(.back)
+        }
         setupModeView()
         if isGuide {
             sysLabel.text = "103"
@@ -84,7 +112,35 @@ class LogVC: BaseVC {
             item = .newest
             showGuideView()
         }
-        ATTrackingManager.requestTrackingAuthorization { _ in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            ATTrackingManager.requestTrackingAuthorization { _ in }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewAppear = false
+        GADUtil.share.disappear(.native)
+    }
+    
+    func addGADNatvieObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(loadNativeAD), name: .nativeUpdate, object: nil)
+    }
+    
+    @objc func loadNativeAD(noti: Notification) {
+        if let nativeModel = noti.object as? GADNativeModel {
+            if viewAppear {
+                if isGuide {
+                    guideView.nativeAD = nativeModel.nativeAd
+                    adView.nativeAd = nil
+                } else {
+                    guideView.nativeAD = nil
+                    adView.nativeAd = nativeModel.nativeAd
+                }
+            } else {
+                adView.nativeAd = nil
+                guideView.nativeAD = nil
+            }
         }
     }
 
@@ -95,10 +151,18 @@ extension LogVC {
         super.setupUI()
         navigationItem.titleView = UIImageView(image: UIImage(named: "log_title"))
         
+        view.addSubview(adView)
+        adView.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.topMargin).offset(26)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(76)
+        }
+        
         let contentView = UIView()
         view.addSubview(contentView)
         contentView.snp.makeConstraints { make in
-            make.top.equalTo(view.snp.topMargin).offset(20)
+            make.top.equalTo(adView.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
         }
@@ -193,14 +257,9 @@ extension LogVC {
     }
     
     func showGuideView() {
-        let view = GuideView{
-            self.setupModeView()
-            // 跳转新增BP
-            self.goBPVC()
-        }
         if let scene = UIApplication.shared.connectedScenes.filter({$0 is UIWindowScene}).first as? UIWindowScene, let window = scene.windows.filter({$0.isKeyWindow}).first  {
-            window.addSubview(view)
-            view.snp.makeConstraints { make in
+            window.addSubview(guideView)
+            guideView.snp.makeConstraints { make in
                 make.top.left.right.bottom.equalToSuperview()
             }
         }
@@ -227,12 +286,17 @@ extension LogVC {
     }
     
     @objc func goBPVC() {
-        let vc = BPVC(BPModel(), mode: .new)
-        vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        GADUtil.share.load(.back)
+        GADUtil.share.load(.enter)
+        GADUtil.share.show(.enter) { _ in
+            let vc = BPVC(BPModel(), mode: .new)
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @objc func goHistoryVC() {
+        GADUtil.share.load(.back)
         let vc = BPHistoryVC()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
