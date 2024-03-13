@@ -493,7 +493,7 @@ extension GADInterstitialModel: GADFullScreenContentDelegate {
         GADInterstitialAd.load(withAdUnitID: model?.theAdID ?? "", request: GADRequest()) { [weak self] ad, error in
             guard let self = self else { return }
             if let error = error {
-                NSLog("[AD] (\(self.position.rawValue)) load ad FAILED for id \(self.model?.theAdID ?? "invalid id")")
+                NSLog("[AD] (\(self.position.rawValue)) load ad FAILED for id \(self.model?.theAdID ?? "invalid id"), err\(error.localizedDescription)")
                 self.loadedHandler?(false, error.localizedDescription)
                 return
             }
@@ -530,7 +530,7 @@ extension GADInterstitialModel: GADFullScreenContentDelegate {
     }
     
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        NSLog("[AD] (\(self.position.rawValue)) didFailToPresentFullScreenContentWithError ad FAILED for id \(self.model?.theAdID ?? "invalid id")")
+        NSLog("[AD] (\(self.position.rawValue)) didFailToPresentFullScreenContentWithError ad FAILED for id \(self.model?.theAdID ?? "invalid id") err: \(error.localizedDescription)")
         closeHandler?()
     }
     
@@ -556,7 +556,7 @@ extension GADOpenModel: GADFullScreenContentDelegate {
         GADAppOpenAd.load(withAdUnitID: model?.theAdID ?? "", request: GADRequest(), orientation: .portrait) { [weak self] ad, error in
             guard let self = self else { return }
             if let error = error {
-                NSLog("[AD] (\(self.position.rawValue)) load ad FAILED for id \(self.model?.theAdID ?? "invalid id")")
+                NSLog("[AD] (\(self.position.rawValue)) load ad FAILED for id \(self.model?.theAdID ?? "invalid id"), err:\(error.localizedDescription)")
                 self.loadedHandler?(false, error.localizedDescription)
                 return
             }
@@ -593,7 +593,7 @@ extension GADOpenModel: GADFullScreenContentDelegate {
     }
     
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        NSLog("[AD] (\(self.position.rawValue)) didFailToPresentFullScreenContentWithError ad FAILED for id \(self.model?.theAdID ?? "invalid id")")
+        NSLog("[AD] (\(self.position.rawValue)) didFailToPresentFullScreenContentWithError ad FAILED for id \(self.model?.theAdID ?? "invalid id"), err:\(error.localizedDescription)")
         closeHandler?()
     }
     
@@ -634,7 +634,7 @@ extension GADNativeModel {
 
 extension GADNativeModel: GADAdLoaderDelegate {
     public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-        NSLog("[AD] (\(position.rawValue)) load ad FAILED for id \(model?.theAdID ?? "invalid id")")
+        NSLog("[AD] (\(position.rawValue)) load ad FAILED for id \(model?.theAdID ?? "invalid id"), err:\(error.localizedDescription)")
         loadedHandler?(false, error.localizedDescription)
     }
 }

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF1F43222BA1A66A004A455A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43212BA1A66A004A455A /* SnapKit */; };
-		BF1F43252BA1A6BE004A455A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43242BA1A6BE004A455A /* GoogleMobileAds */; };
-		BF1F43282BA1C80E004A455A /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43272BA1C80E004A455A /* FacebookAEM */; };
-		BF1F432A2BA1C80E004A455A /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43292BA1C80E004A455A /* FacebookBasics */; };
-		BF1F432C2BA1C80E004A455A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F432B2BA1C80E004A455A /* FacebookCore */; };
+		368AD0712BA1CBA9008D5BF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 368AD0702BA1CBA9008D5BF2 /* SnapKit */; };
+		368AD0742BA1CC27008D5BF2 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = 368AD0732BA1CC27008D5BF2 /* FacebookAEM */; };
+		368AD0762BA1CC27008D5BF2 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = 368AD0752BA1CC27008D5BF2 /* FacebookBasics */; };
+		368AD0782BA1CC27008D5BF2 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 368AD0772BA1CC27008D5BF2 /* FacebookCore */; };
+		368AD07E2BA1CCF2008D5BF2 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 368AD07D2BA1CCF2008D5BF2 /* GoogleMobileAds */; };
 		BFADD3412B9808A800C5E5C0 /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = BFADD3402B9808A800C5E5C0 /* GADConfig.json */; };
 		BFADD34C2B9815BC00C5E5C0 /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADD34B2B9815BC00C5E5C0 /* GADNativeView.swift */; };
 		BFADD34E2B98387D00C5E5C0 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADD34D2B98387D00C5E5C0 /* AppUtil.swift */; };
@@ -116,11 +116,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF1F43282BA1C80E004A455A /* FacebookAEM in Frameworks */,
-				BF1F432C2BA1C80E004A455A /* FacebookCore in Frameworks */,
-				BF1F432A2BA1C80E004A455A /* FacebookBasics in Frameworks */,
-				BF1F43252BA1A6BE004A455A /* GoogleMobileAds in Frameworks */,
-				BF1F43222BA1A66A004A455A /* SnapKit in Frameworks */,
+				368AD0762BA1CC27008D5BF2 /* FacebookBasics in Frameworks */,
+				368AD0742BA1CC27008D5BF2 /* FacebookAEM in Frameworks */,
+				368AD07E2BA1CCF2008D5BF2 /* GoogleMobileAds in Frameworks */,
+				368AD0712BA1CBA9008D5BF2 /* SnapKit in Frameworks */,
+				368AD0782BA1CC27008D5BF2 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +270,11 @@
 			);
 			name = BPSaveu;
 			packageProductDependencies = (
-				BF1F43212BA1A66A004A455A /* SnapKit */,
-				BF1F43242BA1A6BE004A455A /* GoogleMobileAds */,
-				BF1F43272BA1C80E004A455A /* FacebookAEM */,
-				BF1F43292BA1C80E004A455A /* FacebookBasics */,
-				BF1F432B2BA1C80E004A455A /* FacebookCore */,
+				368AD0702BA1CBA9008D5BF2 /* SnapKit */,
+				368AD0732BA1CC27008D5BF2 /* FacebookAEM */,
+				368AD0752BA1CC27008D5BF2 /* FacebookBasics */,
+				368AD0772BA1CC27008D5BF2 /* FacebookCore */,
+				368AD07D2BA1CCF2008D5BF2 /* GoogleMobileAds */,
 			);
 			productName = BPSaveu;
 			productReference = C739585D2B6202B00021BC93 /* BPSaveu.app */;
@@ -305,9 +305,9 @@
 			);
 			mainGroup = C73958542B6202B00021BC93;
 			packageReferences = (
-				BF1F43202BA1A66A004A455A /* XCRemoteSwiftPackageReference "SnapKit" */,
-				BF1F43232BA1A6BE004A455A /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
-				BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				368AD06F2BA1CBA9008D5BF2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				368AD0722BA1CC27008D5BF2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				368AD07C2BA1CCF2008D5BF2 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
 			);
 			productRefGroup = C739585E2B6202B00021BC93 /* Products */;
 			projectDirPath = "";
@@ -529,9 +529,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20240313;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CAP32C8DTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BPSaveu/Resource/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
@@ -564,9 +564,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20240313;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CAP32C8DTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BPSaveu/Resource/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
@@ -617,57 +617,57 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BF1F43202BA1A66A004A455A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		368AD06F2BA1CBA9008D5BF2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
+				minimumVersion = 5.0.0;
 			};
 		};
-		BF1F43232BA1A6BE004A455A /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
+		368AD0722BA1CC27008D5BF2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+		368AD07C2BA1CCF2008D5BF2 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanghits/GoogleMobileAds";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 9.8.0;
-			};
-		};
-		BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.1.0;
+				minimumVersion = 9.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BF1F43212BA1A66A004A455A /* SnapKit */ = {
+		368AD0702BA1CBA9008D5BF2 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BF1F43202BA1A66A004A455A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 368AD06F2BA1CBA9008D5BF2 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		BF1F43242BA1A6BE004A455A /* GoogleMobileAds */ = {
+		368AD0732BA1CC27008D5BF2 /* FacebookAEM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BF1F43232BA1A6BE004A455A /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
-			productName = GoogleMobileAds;
-		};
-		BF1F43272BA1C80E004A455A /* FacebookAEM */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 368AD0722BA1CC27008D5BF2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookAEM;
 		};
-		BF1F43292BA1C80E004A455A /* FacebookBasics */ = {
+		368AD0752BA1CC27008D5BF2 /* FacebookBasics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 368AD0722BA1CC27008D5BF2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookBasics;
 		};
-		BF1F432B2BA1C80E004A455A /* FacebookCore */ = {
+		368AD0772BA1CC27008D5BF2 /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 368AD0722BA1CC27008D5BF2 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookCore;
+		};
+		368AD07D2BA1CCF2008D5BF2 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 368AD07C2BA1CCF2008D5BF2 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
