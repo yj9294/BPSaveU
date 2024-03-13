@@ -8,7 +8,7 @@
 import UIKit
 
 enum BPReadingItem: String, CaseIterable {
-    case protect, eat, exercise, heart
+    case protect, eat, ad, exercise, heart
     var icon: String {
         return "reading_\(self.rawValue)"
     }
@@ -25,6 +25,8 @@ enum BPReadingItem: String, CaseIterable {
             return "Regular exercise, blood pressure is no longer high"
         case .heart:
             return "Stop smoking and limit alcohol to protect heart health"
+        default:
+            return ""
         }
     }
     var description: String {
@@ -59,6 +61,8 @@ To protect heart health, quitting smoking and limiting alcohol consumption is a 
 Second, limiting alcohol intake is also crucial for heart health. While moderate amounts of red wine are thought to have cardiovascular benefits, excessive drinking can lead to high blood pressure, irregular heartbeat and other problems. It is recommended that men consume no more than two drinks a day and women one, while maintaining at least two days of alcohol-free rest.
 The combined effects of quitting smoking and limiting alcohol intake far outweigh their individual effects. This lifestyle change not only helps reduce the risk of heart disease, but also improves overall health. By consistently quitting smoking and drinking alcohol in moderation, we can protect our heart health from potential cardiovascular risks and enjoy a longer life.
 """
+        default:
+            return ""
         }
     }
 }

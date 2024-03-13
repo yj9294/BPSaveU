@@ -10,12 +10,12 @@ import UIKit
 class LoadingVC: BaseVC {
     
     var timer: Timer? = nil
+    var duration = 3.0
     var progress: Double = 0.0 {
         didSet {
             progressView.progress = Float(progress)
         }
     }
-    let duration = 3.0
     
     lazy var progressView: UIProgressView = {
         let progressView = UIProgressView()
@@ -77,6 +77,10 @@ extension LoadingVC {
             timer = nil
         }
         progress = 0.0
+        duration = 15.0
+        GADUtil.share.load(.open)
+        GADUtil.share.load(.native)
+        GADUtil.share.load(.submit)
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(loading), userInfo: nil, repeats: true)
     }
     
@@ -85,7 +89,14 @@ extension LoadingVC {
         if progress >= 1.0 {
             progress = 1.0
             timer?.invalidate()
-            NotificationCenter.default.post(name: .applicationHome, object: nil)
+            GADUtil.share.show(.open) { [weak self] _ in
+                if self?.progress == 1.0 {
+                    NotificationCenter.default.post(name: .applicationHome, object: nil)
+                }
+            }
+        }
+        if progress > 3 / 15.0, GADUtil.share.isLoaded(.open) {
+            duration = 1.0
         }
     }
     

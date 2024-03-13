@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1F43222BA1A66A004A455A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43212BA1A66A004A455A /* SnapKit */; };
+		BF1F43252BA1A6BE004A455A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43242BA1A6BE004A455A /* GoogleMobileAds */; };
+		BF1F43282BA1C80E004A455A /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43272BA1C80E004A455A /* FacebookAEM */; };
+		BF1F432A2BA1C80E004A455A /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F43292BA1C80E004A455A /* FacebookBasics */; };
+		BF1F432C2BA1C80E004A455A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = BF1F432B2BA1C80E004A455A /* FacebookCore */; };
+		BFADD3412B9808A800C5E5C0 /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = BFADD3402B9808A800C5E5C0 /* GADConfig.json */; };
+		BFADD34C2B9815BC00C5E5C0 /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADD34B2B9815BC00C5E5C0 /* GADNativeView.swift */; };
+		BFADD34E2B98387D00C5E5C0 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADD34D2B98387D00C5E5C0 /* AppUtil.swift */; };
+		BFADD3502B983E4000C5E5C0 /* BPReadingADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFADD34F2B983E4000C5E5C0 /* BPReadingADCell.swift */; };
+		BFB4A99D2B9AF1080072E084 /* GADUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4A99B2B9AF1080072E084 /* GADUtil.swift */; };
+		BFB4A99E2B9AF1080072E084 /* GADUtil_async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB4A99C2B9AF1080072E084 /* GADUtil_async.swift */; };
 		C71CAE182B62384E00CA0736 /* CusTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CAE172B62384E00CA0736 /* CusTabBarController.swift */; };
 		C71CAE1C2B623AEE00CA0736 /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CAE1B2B623AED00CA0736 /* LogVC.swift */; };
 		C71CAE1E2B623AF700CA0736 /* VisionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CAE1D2B623AF700CA0736 /* VisionsVC.swift */; };
@@ -30,7 +41,6 @@
 		C73958842B6203AA0021BC93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C739587C2B6203AA0021BC93 /* Main.storyboard */; };
 		C739588C2B6204680021BC93 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C739588B2B6204680021BC93 /* LoadingVC.swift */; };
 		C739588E2B6204D20021BC93 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C739588D2B6204D20021BC93 /* HomeVC.swift */; };
-		C73958912B620B8D0021BC93 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C73958902B620B8D0021BC93 /* SnapKit */; };
 		C73958932B620D0A0021BC93 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73958922B620D0A0021BC93 /* BaseVC.swift */; };
 		C73958952B62290E0021BC93 /* AppExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73958942B62290E0021BC93 /* AppExt.swift */; };
 		C79BD3212B63A98000AA9763 /* BPStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79BD3202B63A98000AA9763 /* BPStatusView.swift */; };
@@ -51,6 +61,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BFADD3402B9808A800C5E5C0 /* GADConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GADConfig.json; sourceTree = "<group>"; };
+		BFADD34B2B9815BC00C5E5C0 /* GADNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeView.swift; sourceTree = "<group>"; };
+		BFADD34D2B98387D00C5E5C0 /* AppUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
+		BFADD34F2B983E4000C5E5C0 /* BPReadingADCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPReadingADCell.swift; sourceTree = "<group>"; };
+		BFB4A99B2B9AF1080072E084 /* GADUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GADUtil.swift; sourceTree = "<group>"; };
+		BFB4A99C2B9AF1080072E084 /* GADUtil_async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GADUtil_async.swift; sourceTree = "<group>"; };
 		C71CAE172B62384E00CA0736 /* CusTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusTabBarController.swift; sourceTree = "<group>"; };
 		C71CAE1B2B623AED00CA0736 /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
 		C71CAE1D2B623AF700CA0736 /* VisionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionsVC.swift; sourceTree = "<group>"; };
@@ -100,7 +116,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73958912B620B8D0021BC93 /* SnapKit in Frameworks */,
+				BF1F43282BA1C80E004A455A /* FacebookAEM in Frameworks */,
+				BF1F432C2BA1C80E004A455A /* FacebookCore in Frameworks */,
+				BF1F432A2BA1C80E004A455A /* FacebookBasics in Frameworks */,
+				BF1F43252BA1A6BE004A455A /* GoogleMobileAds in Frameworks */,
+				BF1F43222BA1A66A004A455A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +166,7 @@
 		C73958782B6203AA0021BC93 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BFADD3402B9808A800C5E5C0 /* GADConfig.json */,
 				C73958792B6203AA0021BC93 /* Assets.xcassets */,
 				C739587A2B6203AA0021BC93 /* LaunchScreen.storyboard */,
 				C739587C2B6203AA0021BC93 /* Main.storyboard */,
@@ -168,7 +189,10 @@
 		C73958872B6204320021BC93 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BFB4A99C2B9AF1080072E084 /* GADUtil_async.swift */,
+				BFB4A99B2B9AF1080072E084 /* GADUtil.swift */,
 				C73958942B62290E0021BC93 /* AppExt.swift */,
+				BFADD34D2B98387D00C5E5C0 /* AppUtil.swift */,
 				C71CAE252B62448A00CA0736 /* CacheUtil.swift */,
 			);
 			path = Util;
@@ -180,6 +204,7 @@
 				C71CAE172B62384E00CA0736 /* CusTabBarController.swift */,
 				C71CAE212B62407D00CA0736 /* CusTabBar.swift */,
 				C71CAE292B62578A00CA0736 /* GuideView.swift */,
+				BFADD34B2B9815BC00C5E5C0 /* GADNativeView.swift */,
 				C71CAE2F2B6349AD00CA0736 /* SelectButton.swift */,
 				C71CAE312B6350BC00CA0736 /* SelectView.swift */,
 				C71CAE332B636DB700CA0736 /* BPSceneView.swift */,
@@ -193,6 +218,7 @@
 				C7B5B4352B67564E00489CD2 /* BPHistoryCell.swift */,
 				C7B5B4392B67764400489CD2 /* SettingsCell.swift */,
 				C7B5B43F2B67812C00489CD2 /* TipView.swift */,
+				BFADD34F2B983E4000C5E5C0 /* BPReadingADCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +230,7 @@
 				C739588B2B6204680021BC93 /* LoadingVC.swift */,
 				C739588D2B6204D20021BC93 /* HomeVC.swift */,
 				C71CAE1B2B623AED00CA0736 /* LogVC.swift */,
+				C7B5B4332B6754E300489CD2 /* BPHistoryVC.swift */,
 				C71CAE2B2B625CE300CA0736 /* BPVC.swift */,
 				C79BD3262B63B86A00AA9763 /* BPFinishVC.swift */,
 				C71CAE1D2B623AF700CA0736 /* VisionsVC.swift */,
@@ -211,7 +238,6 @@
 				C7B5B43D2B677DF400489CD2 /* PrivacyVC.swift */,
 				C7B5B43B2B677A5100489CD2 /* BPFeedbackVC.swift */,
 				C7B5B4312B674DCF00489CD2 /* BPReadingDetailVC.swift */,
-				C7B5B4332B6754E300489CD2 /* BPHistoryVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -244,7 +270,11 @@
 			);
 			name = BPSaveu;
 			packageProductDependencies = (
-				C73958902B620B8D0021BC93 /* SnapKit */,
+				BF1F43212BA1A66A004A455A /* SnapKit */,
+				BF1F43242BA1A6BE004A455A /* GoogleMobileAds */,
+				BF1F43272BA1C80E004A455A /* FacebookAEM */,
+				BF1F43292BA1C80E004A455A /* FacebookBasics */,
+				BF1F432B2BA1C80E004A455A /* FacebookCore */,
 			);
 			productName = BPSaveu;
 			productReference = C739585D2B6202B00021BC93 /* BPSaveu.app */;
@@ -275,7 +305,9 @@
 			);
 			mainGroup = C73958542B6202B00021BC93;
 			packageReferences = (
-				C739588F2B620B8D0021BC93 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BF1F43202BA1A66A004A455A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BF1F43232BA1A6BE004A455A /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
+				BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = C739585E2B6202B00021BC93 /* Products */;
 			projectDirPath = "";
@@ -291,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFADD3412B9808A800C5E5C0 /* GADConfig.json in Resources */,
 				C73958842B6203AA0021BC93 /* Main.storyboard in Resources */,
 				C73958832B6203AA0021BC93 /* LaunchScreen.storyboard in Resources */,
 				C73958822B6203AA0021BC93 /* Assets.xcassets in Resources */,
@@ -305,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B5B42C2B673E5800489CD2 /* BPFinishLabel.swift in Sources */,
+				BFADD3502B983E4000C5E5C0 /* BPReadingADCell.swift in Sources */,
 				C71CAE262B62448A00CA0736 /* CacheUtil.swift in Sources */,
 				C71CAE202B623B0200CA0736 /* SettingsVC.swift in Sources */,
 				C79BD3252B63B10E00AA9763 /* BPTimeView.swift in Sources */,
@@ -318,11 +352,13 @@
 				C73958932B620D0A0021BC93 /* BaseVC.swift in Sources */,
 				C71CAE342B636DB700CA0736 /* BPSceneView.swift in Sources */,
 				C71CAE2C2B625CE300CA0736 /* BPVC.swift in Sources */,
+				BFADD34C2B9815BC00C5E5C0 /* GADNativeView.swift in Sources */,
 				C739588E2B6204D20021BC93 /* HomeVC.swift in Sources */,
 				C739588C2B6204680021BC93 /* LoadingVC.swift in Sources */,
 				C79BD3232B63ABF600AA9763 /* BPStatusCell.swift in Sources */,
 				C7B5B4302B6745CB00489CD2 /* ReadingData.swift in Sources */,
 				C71CAE322B6350BD00CA0736 /* SelectView.swift in Sources */,
+				BFB4A99E2B9AF1080072E084 /* GADUtil_async.swift in Sources */,
 				C7B5B4362B67564F00489CD2 /* BPHistoryCell.swift in Sources */,
 				C7B5B43A2B67764400489CD2 /* SettingsCell.swift in Sources */,
 				C71CAE302B6349AD00CA0736 /* SelectButton.swift in Sources */,
@@ -331,11 +367,13 @@
 				C71CAE1E2B623AF700CA0736 /* VisionsVC.swift in Sources */,
 				C7B5B43E2B677DF400489CD2 /* PrivacyVC.swift in Sources */,
 				C71CAE2E2B625D0200CA0736 /* BPData.swift in Sources */,
+				BFB4A99D2B9AF1080072E084 /* GADUtil.swift in Sources */,
 				C7B5B4322B674DCF00489CD2 /* BPReadingDetailVC.swift in Sources */,
 				C71CAE282B624EB500CA0736 /* LogRectangle.swift in Sources */,
 				C71CAE242B62436000CA0736 /* LogData.swift in Sources */,
 				C7B5B4402B67812C00489CD2 /* TipView.swift in Sources */,
 				C739587F2B6203AA0021BC93 /* ViewController.swift in Sources */,
+				BFADD34E2B98387D00C5E5C0 /* AppUtil.swift in Sources */,
 				C71CAE222B62407D00CA0736 /* CusTabBar.swift in Sources */,
 				C73958812B6203AA0021BC93 /* SceneDelegate.swift in Sources */,
 				C71CAE182B62384E00CA0736 /* CusTabBarController.swift in Sources */,
@@ -490,8 +528,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20240207;
+				CURRENT_PROJECT_VERSION = 20240313;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BPSaveu/Resource/Info.plist;
@@ -507,7 +546,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.health.sugerblood.iosbp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -524,8 +563,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20240207;
+				CURRENT_PROJECT_VERSION = 20240313;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BPSaveu/Resource/Info.plist;
@@ -541,7 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.health.sugerblood.iosbp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -577,21 +617,57 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C739588F2B620B8D0021BC93 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		BF1F43202BA1A66A004A455A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.0;
+				minimumVersion = 5.7.1;
+			};
+		};
+		BF1F43232BA1A6BE004A455A /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanghits/GoogleMobileAds";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.8.0;
+			};
+		};
+		BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C73958902B620B8D0021BC93 /* SnapKit */ = {
+		BF1F43212BA1A66A004A455A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C739588F2B620B8D0021BC93 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = BF1F43202BA1A66A004A455A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		BF1F43242BA1A6BE004A455A /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1F43232BA1A6BE004A455A /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
+			productName = GoogleMobileAds;
+		};
+		BF1F43272BA1C80E004A455A /* FacebookAEM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookAEM;
+		};
+		BF1F43292BA1C80E004A455A /* FacebookBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookBasics;
+		};
+		BF1F432B2BA1C80E004A455A /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF1F43262BA1C80E004A455A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

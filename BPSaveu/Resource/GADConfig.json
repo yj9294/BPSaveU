@@ -1,0 +1,49 @@
+{
+    "showTimes":30,
+    "clickTimes":5,
+    "interstitialExpired": 54,
+    "openExpired": 233,
+    "ads": [
+        {
+            "key": "open",
+            "value": [
+                {
+                    "theAdPriority":1,
+                    "theAdID":"ca-app-pub-5498571361501032/3881758813"
+                }
+            ]
+        },
+        {
+            "key": "native",
+            "value": [
+                {
+                    "theAdPriority":1,
+                    "theAdID":"ca-app-pub-5498571361501032/9756902027"
+                }
+            ]
+        },{
+            "key": "submit",
+            "value": [
+                {
+                    "theAdPriority":1,
+                    "theAdID":"ca-app-pub-5498571361501032/4525343378"
+                }
+        },{
+            "key": "enter",
+            "value": [
+                {
+                    "theAdPriority":1,
+                    "theAdID":"ca-app-pub-5498571361501032/1155630924"
+                }
+            ]
+        },{
+            "key": "back",
+            "value": [
+                {
+                    "theAdPriority":1,
+                    "theAdID":"ca-app-pub-5498571361501032/1899180031"
+                }
+            ]
+        }
+    ]
+}

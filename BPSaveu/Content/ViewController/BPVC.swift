@@ -106,7 +106,11 @@ class BPVC: BaseVC {
     }
     
     @objc func back() {
-        navigationController?.popViewController(animated: true)
+        GADUtil.share.show(.back) { _ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @objc func deleteT() {
@@ -120,12 +124,15 @@ class BPVC: BaseVC {
             return
         }
         
-        if mode == .new {
-            CacheUtil.shared.appBPModel(item)
-            navigationController?.pushViewController(BPFinishVC(item), animated: true)
+        if self.mode == .new {
+            GADUtil.share.load(.submit)
+            GADUtil.share.show(.submit) { _ in
+                CacheUtil.shared.appBPModel(self.item)
+                self.navigationController?.pushViewController(BPFinishVC(self.item), animated: true)
+            }
         } else{
-            CacheUtil.shared.updateBPModel(item)
-            navigationController?.popViewController(animated: true)
+            CacheUtil.shared.updateBPModel(self.item)
+            self.navigationController?.popViewController(animated: true)
         }
     }
 
